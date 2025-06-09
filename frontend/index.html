@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Gastos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu gerenciador de gastos</h1>
+    </header>
+
+    <section class="resumo">
+        <div class="card entrada">
+            <h2>Entradas</h2>
+            <p>R$ 0,00</p>
+        </div>
+        <div class="card saida">
+            <h2>Saídas</h2>
+            <p>R$ 0,00</p>
+        </div>
+        <div class="card saldo">
+            <h2>Saldo</h2>
+            <p>R$ 0,00</p>
+        </div>
+    </section>
+
+    <section class="grafico">
+        <h2>Gráficos Financeiros</h2>
+        <canvas id="graficoPizza"></canvas>
+        <canvas id="graficoLinha"></canvas>
+    </section>
+
+    <section class="acoes">
+        <button id="adicionarGasto">Adicionar Gasto</button>
+        <button id="adicionarReceita">Adicionar Receita</button>
+        <button id="verSugestoes">Ver Sugestões da IA</button>
+    </section>
+
+    <div id="modalCadastro" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" id="fecharModal">&times;</span>
+            <h2>Adicionar Transação</h2>
+            <form id="formCadastro">
+                <label>Tipo:</label>
+                <select id="tipo">
+                    <option value="entrada">Entrada</option>
+                    <option value="saida">Saída</option>
+                </select>
+
+                <label>Valor:</label>
+                <input type="number" id="valor" required>
+
+                <label>Data:</label>
+                <input type="date" id="data" required>
+                
+                <label>Categoria:</label>
+                <input type="text" id="categoria" required>
+
+                <label>Descrição:</label>
+                <input type="text" id="descrição" required>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalSugestoes" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" id="fecharSugestoes">&times;</span>
+            <h2>Sugestões da IA</h2>
+            <ul id="listaSugestoes">
+                <li>Reduza os gastos com lazer para equilibrar o orçamento.</li>
+                <li>Reserve 10% das entradas para emergências.</li>
+                <li>Evite compras parceladas sem necessidade.</li>
+            </ul>
+            ><button id="novaSugestao">Gerar nova sugestão</button> 
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
