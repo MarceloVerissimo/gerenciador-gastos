@@ -129,3 +129,46 @@ form button:hover {
 #listaSugestoes li {
   margin-bottom: 10px;
 }
+
+/* Tabela de transações */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #eef;
+  transition: 0.2s;
+}
+
+h3 {
+  margin-top: 40px;
+  color: #333;
+  font-size: 24px;
+}
+
+

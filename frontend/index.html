@@ -12,23 +12,39 @@
     </header>
 
     <section class="resumo">
-        <div class="card entrada">
+        <div class="card">
             <h2>Entradas</h2>
-            <p>R$ 0,00</p>
+            <p id="valorEntradas">R$ 0,00</p>
         </div>
-        <div class="card saida">
+        <div class="card">
             <h2>Saídas</h2>
-            <p>R$ 0,00</p>
+            <p id="valorSaidas">R$ 0,00</p>
         </div>
-        <div class="card saldo">
+        <div class="card">
             <h2>Saldo</h2>
-            <p>R$ 0,00</p>
+            <p id="valorSaldo">R$ 0,00</p>
         </div>
     </section>
 
-    <section class="grafico">
-        <h2>Gráficos Financeiros</h2>
-        <canvas id="graficoPizza"></canvas>
+    <h3>Histórico de Transações</h3>
+    <table id="tabelaTransacoes">
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <section>
+    <h2>Gráficos Financeiros</h2>
+        <canvas id="graficoPizza"></canvas>       
         <canvas id="graficoLinha"></canvas>
     </section>
 
@@ -59,7 +75,7 @@
                 <input type="text" id="categoria" required>
 
                 <label>Descrição:</label>
-                <input type="text" id="descrição" required>
+                <input type="text" id="descricao" required>
 
                 <button type="submit">Salvar</button>
             </form>
